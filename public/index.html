@@ -2,36 +2,128 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Spotify clone</title>
   </head>
-  <body>
+  <body class="app">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <header class="header">
+      <p class="simple_text_heavt">Clonned Spotify</p>
+      <form>
+        <button class="header_button">Войти в аккаунт Spotify</button>
+      </form>
+      <form>
+        <input type="search" class="header_search" placeholder="Search music..."/>
+        <button class="header_button">Поиск</button>
+      </form>
+    </header>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <aside class="accordion">
+      <nav class="link_holder">
+        <a href="favicon.ico" class="link">Поиск</a><br>
+        <a href="favicon.ico" class="link">Моя медиатека</a><br>
+        <a href="favicon.ico" class="link">Создать плейлист</a><br>
+        <a href="favicon.ico" class="link">Любимые треки</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="info">
+        <img src="data/images/Spotify_Logo_RGB_Black.png" alt="Spotify logo">
+        <p class="source_info">Вся информация предоставлена Spotify</p>
+        <a href="https://www.spotify.com/kg-ru/download" class="link">Скачать Spotify</a>
+        <p class="simple_text_heavy">Created by Dan 2022</p>
+      </div>
+      <br>
+      <div class="card_row">
+        <div class = "card">
+          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+            <img src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar" height="250px" width="250px">
+          </a>
+          <div class="card_content">
+            <p class="simple_text_heavy">Front by Front<p>
+            <p>Front 242</p>
+          </div>
+        </div>
+        <div class = "card">
+          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+            <img src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar" height="250px" width="250px">
+          </a>
+          <div class="card_content">
+            <p class="simple_text_heavy">Front by Front<p>
+            <p>Front 242</p>
+          </div>
+        </div>
+        <div class = "card">
+          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+            <img src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar" height="250px" width="250px">
+          </a>
+          <div class="card_content">
+            <p class="simple_text_heavy">Front by Front<p>
+            <p>Front 242</p>
+          </div>
+        </div>
+        <div class = "card">
+          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+            <img src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar" height="250px" width="250px">
+          </a>
+          <div class="card_content">
+            <p class="simple_text_heavy">Front by Front<p>
+            <p>Front 242</p>
+          </div>
+        </div>
+      </div>
+      <div class="card_row">
+        <div class = "card">
+          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+            <img src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar" height="250px" width="250px">
+          </a>
+          <div class="card_content">
+            <p class="simple_text_heavy">Front by Front<p>
+            <p>Front 242</p>
+          </div>
+        </div>
+        <div class = "card">
+          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+            <img src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar" height="250px" width="250px">
+          </a>
+          <div class="card_content">
+            <p class="simple_text_heavy">Front by Front<p>
+            <p>Front 242</p>
+          </div>
+        </div>
+        <div class = "card">
+          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+            <img src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar" height="250px" width="250px">
+          </a>
+          <div class="card_content">
+            <p class="simple_text_heavy">Front by Front<p>
+            <p>Front 242</p>
+          </div>
+        </div>
+        <div class = "card">
+          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+            <img src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar" height="250px" width="250px">
+          </a>
+          <div class="card_content">
+            <p class="simple_text_heavy">Front by Front<p>
+            <p>Front 242</p>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <form class="player">
+        <button class="back_button"></button>
+        <button class="play_button"></button>
+        <button class="next_button"></button>
+        <button class="like_button"></button>
+        <progress class="music_progress" id="track_time" max="100" value="65"></progress>
+      </form>
+    </footer> 
   </body>
 </html>
