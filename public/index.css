@@ -1,27 +1,28 @@
 .simple_text{
-    font-family: 'Liberation Mono', Consolas, Verdana;
     color: #BBB6A5;
 }
 .simple_text_heavy{
-    font-family: 'Liberation Mono', Consolas, Verdana;
     color: #2A2F33;
+    margin: 2%;
     font-weight: bold;
 }
 
 .source_info{
     font-weight: bold;
-    font-family: 'Liberation Mono', Consolas, Verdana;
     color: #2A2F33;
     font-size: large;
+    margin: 2%;
 }
 
 .app{
     display: grid;
     background-color: #2A2F33;
     height: 100vh;
-    grid-template-columns: 200px, 1fr;
+    overflow-x: hidden;
+    width: 100%;
+    grid-template-columns: 20% 80%;
     grid-template-rows: min-content 1fr min-content;
-    font-family: 'Liberation Mono', Consolas, Verdana;
+    font-family: 'Liberation Mono', Consolas, Verdana, sans-serif;
 }
 .footer{
     display: flex;
@@ -56,9 +57,14 @@
 }
 
 .link_holder{
-    display: grid;
-    grid-row: auto auto auto auto;
-    grid-column: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 3px;
+   padding-left: 10px;
+}
+
+.image_size{
+    width: 100%;
 }
 
 .link{
@@ -66,8 +72,8 @@
     text-decoration: solid;
     font-weight: bold;
     font-size: 18px;
-    padding: 10px;
-    margin: 5px;
+    padding-top: 2%;
+    margin: 1px;
 }
 
 .link:hover{
@@ -84,38 +90,37 @@
     color: #2A2F33;
     justify-content: space-evenly;
     height: 75px;
-    width: 160vh;
+    width: 95%;
 }
 
 .header_search{
-    width: 350px;
+    width: 70%;
     height: 30px;
-    font-family: 'Liberation Mono', Consolas, Verdana;
+    font-family: 'Liberation Mono', Consolas, Verdana, sans-serif;
     background-color: #BBB6A5;
 }
 .header_button{
     height: 30px;
-    font-family: 'Liberation Mono', Consolas, Verdana;
+    font-family: 'Liberation Mono', Consolas, Verdana, sans-serif;
     background-color: #BBB6A5;
 }
 
 .card_row{
-    width: max-content;
-    height: 360px;
+    width: 100%;
+    height: 40%;
     display: grid;
     position:relative;
     justify-content: center;
-    grid-template-columns: repeat(4,250px);
-    grid-gap: 80px;
+    grid-template-columns: repeat(4,20%);
+    grid-gap: 5%;
     padding: 5px;
 }
 
 .card{
-    height: max-content;
-    width: max-content;
+    height: 90%;
+    width: 100%;
     background-color: #8C9491;
     color: #2A2F33;
-    font-family: 'Liberation Mono', Consolas, Verdana;
 }
 
 .card:hover{
@@ -124,7 +129,6 @@
 
 .card_content{
     padding-left: 5px;
-    font-family: 'Liberation Mono', Consolas, Verdana;
     background-color: #8C9491;
     color: #2A2F33;
 }
@@ -134,7 +138,6 @@
     grid-template-columns: repeat(4,30px);
     column-gap: 65px;
     grid-template-rows: repeat(2,30px);
-    font-family: 'Liberation Mono', Consolas, Verdana;
     font-weight: bold;
     padding: 5px;
     height: max-content;
