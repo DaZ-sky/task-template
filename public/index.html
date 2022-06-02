@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="index.css" />
     <title>Last.fm copy</title>
-    <script  type="text/javascript" src="../src/scripts/lastfm_search_module.js" async></script>
   </head>
   <body class="app">
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -19,7 +18,7 @@
         <input id="track_search" type="search" class="header_search" placeholder="Search track..."/>
         <input id="album_search" type="search" class="header_search" placeholder="Search album..."/>
         <input id="autor_search" type="search" class="header_search" placeholder="Search artist..."/>
-        <button id="search_button" class="header_button" onclick="start_search();">Поиск</button>
+        <button id="search_button" class="header_button">Поиск</button>
       </form>
     </header>
 
@@ -127,6 +126,12 @@
         <progress class="music_progress" id="track_time" max="100" value="65"></progress>
       </form>
     </footer> 
+
+    <script type="module" src="%PUBLIC_URL%/scripts/get_popular_tracks.js" async></script>
+    <script type="module" async>
+      import {start_search} from "%PUBLIC_URL%/scripts/lastfm_search_module.js";
+      document.getElementById('search_button').addEventListener('click', start_search);
+    </script>
 
   </body>
 </html>
