@@ -4,25 +4,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <title>Spotify clone</title>
+    <title>Last.fm copy</title>
   </head>
   <body class="app">
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <header class="header">
-      <p class="simple_text_heavt">Clonned Spotify</p>
+      <p class="simple_text_heavt">Simple application with last.fm</p>
       <form>
-        <button class="header_button">Войти в аккаунт Spotify</button>
+        <button class="header_button">Перейти к last.fm</button>
       </form>
       <form>
-        <input type="search" class="header_search" placeholder="Search music..."/>
-        <button class="header_button">Поиск</button>
+        <input id="track_search" type="search" class="header_search" placeholder="Search track..."/>
+        <input id="album_search" type="search" class="header_search" placeholder="Search album..."/>
+        <input id="autor_search" type="search" class="header_search" placeholder="Search artist..."/>
+        <button id="search_button" class="header_button">Поиск</button>
       </form>
     </header>
 
     <aside class="accordion">
       <nav class="link_holder">
-        <a href="favicon.ico" class="link">Поиск</a><br>
+        <a href="favicon.ico" class="link">Поиск lastfm</a><br>
         <a href="favicon.ico" class="link">Моя медиатека</a><br>
         <a href="favicon.ico" class="link">Создать плейлист</a><br>
         <a href="favicon.ico" class="link">Любимые треки</a>
@@ -31,15 +33,14 @@
 
     <main class="main">
       <div class="info">
-        <img src="data/images/Spotify_Logo_RGB_Black.png" alt="Spotify logo">
-        <p class="source_info">Вся информация предоставлена Spotify</p>
-        <a href="https://www.spotify.com/kg-ru/download" class="link">Скачать Spotify</a>
+        <img src="data/images/Lastfm_logo.svg" alt="Spotify logo">
+        <p class="source_info">Вся информация предоставлена Last.fm и coverartarchive.org</p>
         <p class="simple_text_heavy">Created by Dan 2022</p>
       </div>
       <br>
-      <div class="card_row">
+      <div id="card_row0" class="card_row">
         <div class = "card">
-          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+          <a href="https://www.last.fm/ru/music/Front+242/Front+by+Front">
             <img class="image_size" src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar">
           </a>
           <div class="card_content">
@@ -48,7 +49,7 @@
           </div>
         </div>
         <div class = "card">
-          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+          <a href="https://www.last.fm/ru/music/Front+242/Front+by+Front">
             <img class="image_size" src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar">
           </a>
           <div class="card_content">
@@ -57,7 +58,7 @@
           </div>
         </div>
         <div class = "card">
-          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+          <a href="https://www.last.fm/ru/music/Front+242/Front+by+Front">
             <img class="image_size" src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar">
           </a>
           <div class="card_content">
@@ -66,7 +67,7 @@
           </div>
         </div>
         <div class = "card">
-          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+          <a href="https://www.last.fm/ru/music/Front+242/Front+by+Front">
             <img class="image_size" src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar">
           </a>
           <div class="card_content">
@@ -75,9 +76,9 @@
           </div>
         </div>
       </div>
-      <div class="card_row">
+      <div id="card_row1" class="card_row">
         <div class = "card">
-          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+          <a href="https://www.last.fm/ru/music/Front+242/Front+by+Front">
             <img class="image_size" src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar">
           </a>
           <div class="card_content">
@@ -86,7 +87,7 @@
           </div>
         </div>
         <div class = "card">
-          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+          <a href="https://www.last.fm/ru/music/Front+242/Front+by+Front">
             <img class="image_size" src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar">
           </a>
           <div class="card_content">
@@ -95,7 +96,7 @@
           </div>
         </div>
         <div class = "card">
-          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+          <a href="https://www.last.fm/ru/music/Front+242/Front+by+Front">
             <img class="image_size" src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar">
           </a>
           <div class="card_content">
@@ -104,7 +105,7 @@
           </div>
         </div>
         <div class = "card">
-          <a href="https://open.spotify.com/album/37812I03ggicgeRTImAJfh">
+          <a href="https://www.last.fm/ru/music/Front+242/Front+by+Front">
             <img class="image_size" src="data/images/Front242_frontbyfront.jpg" alt="Album_avatar">
           </a>
           <div class="card_content">
@@ -125,5 +126,12 @@
         <progress class="music_progress" id="track_time" max="100" value="65"></progress>
       </form>
     </footer> 
+
+    <script type="module" src="%PUBLIC_URL%/scripts/get_popular_tracks.js" async></script>
+    <script type="module" async>
+      import {start_search} from "%PUBLIC_URL%/scripts/lastfm_search_module.js";
+      document.getElementById('search_button').addEventListener('click', start_search);
+    </script>
+
   </body>
 </html>
