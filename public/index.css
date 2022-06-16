@@ -14,6 +14,10 @@
     margin: 2%;
 }
 
+.test{
+    background-color: #2A2F33;
+}
+
 .app{
     display: grid;
     background-color: #2A2F33;
@@ -40,6 +44,7 @@
     padding: 4px 40px;
     font-size: 18px;
     height: 75px;
+    width: 100%;
     grid-column: 1 / 3;
     background-color: #8C9491;
     border: 2px solid #BBB6A5;
@@ -47,6 +52,7 @@
 .accordion{
     width: max-content;
     padding-top: 10px;
+    height: 100%;
     background-color: #8C9491;
 }
 
@@ -107,18 +113,20 @@
 
 .card_row{
     width: 100%;
-    height: 40%;
+    /* height: 40%; */
     display: grid;
     position:relative;
     justify-content: center;
     grid-template-columns: repeat(4,20%);
-    grid-gap: 5%;
+    grid-template-rows: 40% 40%;
+    row-gap: 10%;
+    column-gap: 5%;
     padding: 5px;
     box-sizing: border-box;
 }
 
 .card{
-    height: 90%;
+    /* height: 100%; */
     width: 100%;
     background-color: #8C9491;
     color: #2A2F33;
